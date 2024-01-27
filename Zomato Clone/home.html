@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lan="en">
+<head>
+<head>
+  <title>Zomato</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+ <style type="text/css">
+
+
+.wrapper_menu{
+	margin-top: 65px;
+}
+.wrapper{
+	margin: 0 auto;
+    background-color: #FFF;
+    margin-left: -25px;
+    padding-left: 33px;
+    border-radius: 7px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+	}
+	.places{
+	margin-top: 65px;
+    background-color: #FFF;
+    margin-left: 70px;
+    padding-left: 43px;
+    border-radius: 7px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+	}
+	
+	ul{
+		margin:0 auto;
+		list-style-type: none;
+	}
+	li{
+		margin:9px;
+		color:black;
+	}
+	a{
+		color: black;
+		text-decoration: none;
+	}
+	a:hover{
+		text-decoration: none;
+		color: black;
+	}
+	.statistics{
+		margin-left:430px;
+		display:inline-flex;
+	}
+	.value{
+		font-weight: 400;
+		color: #B9BFC7;
+		text-transform: uppercase;
+		font-size: 40px;
+	}
+	.label1{
+		font-weight: 700;
+		color: #B9BFC7;
+		text-transform: uppercase;
+		font-size: 15px;
+		text-align:center;
+	}
+	.stats{
+		margin: 10px 30px;
+		text-align: center;
+	}
+	.first{
+		margin-left: -250px;
+	}
+	.logo1{
+	height:60px;
+	width:60px;
+	margin:0 120px;
+	margin-top: 45px;
+	text-align:center;
+	padding:20px 10px;
+	background-color: #B22222	;
+	color: #FFF;
+	border-radius:4px;
+	}
+	.footer{
+
+    background-color: #282C35;
+    border-top: 1px solid #eee;
+   	}
+	.footer_divider{
+		border-top:1px solid #3C3F46	;
+		width:1140px;
+		margin: 5px auto;
+	}
+	.footer_bottom li{
+		float:left;
+	}
+	.footer li{
+		color: #cdcdcd;
+	}
+	.footer h3{
+		color:#ADB0B6;
+		font-weight: 700;
+		font-size: 18px;
+	}
+	.footer_list{
+	height: 40px;
+    padding-left: 55px;
+	justify-content: space-between;
+	}
+
+
+</style> 
+</head>
+<body>
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#"><i class="material-icons">phone_android</i>Get the App</a>
+			</div>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="order.html"><i class="material-icons">local_grocery_store</i>Order Food</a></li>
+				<li><a href="#"><i class="material-icons">local_dining</i>Book a Table</a></li>
+				<li><a href="#"><i class="material-icons">grade</i>Zomato Gold</a></li>
+			</ul>
+		</div>
+	</nav>
+	<div class="header">
+		<div class="row">
+			<div class="btn1">
+			<button type="button" class="btn btn-default">Log in</button>
+			<button type="button" class="btn btn-default">Create an account</button>
+		    </div>
+		</div>
+	
+	<div class="middle">
+
+		<div class="logo">
+			<h3 style="font-size: 30px;">Zomato</h3>
+		</div>
+		<div class="text-center">
+			<h4 style="font-size: 25px; margin-top: 45px; color:#FFF;">Find the best restaurants, cafés, and bars in Delhi NCR</h4>
+		</div>
+		<form>
+			<div class="col-xs-3">
+				<div class="input-group">
+					<span class="input-group-addon"><i class="glyphicon glyphicon-send"></i></span>
+					<input type="text-box" class="form-control" id="loc" placeholder="Please type a location">	
+				</div>
+			</div>
+		<div class="col-xs-6">
+			<div class="input-group">
+				<span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+				<input type="text-box" class="form-control" id="rest" placeholder="Search for restaurants or cuisines...">			
+		    </div>
+		</div>
+		 <button type="button" class="btn btn-danger">Search</button>
+		</form>
+		<br>
+	</div>
+	</div>
+
+	<!-- Food section -->
+	<div>
+		<br>
+		<h2 style="margin-left: 80px;">Inspiration for your first order</h2>
+		<div class="wrapper-food">
+			<div class="Food">
+				<img class="Food1" src="images/Food1.png" alt="" style="width: 200px;" >
+				<div class="Food-name">
+					<p>Biryani</p>
+				</div>
+			</div>
+
+			<div class="Food">
+				<img class="Food1" src="images/Food2.png" alt="" style="width: 200px; ">
+				<div class="Food-name">
+					<p>Pizza</p>
+				</div>
+			</div>
+			<div class="Food">
+				<img class="Food1" src="images/Food3.png" alt="" style="width: 200px;">
+				<div class="Food-name">
+					<p>Chicken</p>
+				</div>
+				
+			</div>
+			<div class="Food">
+				<img class="Food1" src="images/Food4.png" alt="" style="width: 200px;" >
+				<div class="Food-name">
+					<p>Thali</p>
+				</div>
+			</div>
+			<div class="Food">
+				<img class="Food1" src="images/Food5.png" alt="" style="width: 200px;">
+				<div class="Food-name">
+					<p>Burger</p>
+				</div>
+			</div>
+			<div class="Food">
+				<img class="Food1" src="images/Food6.png" alt="" style="width: 200px;">
+				<div class="Food-name">
+					<p>Fried Rice</p>
+				</div>
+			</div>
+			<div class="Food">
+				<img class="Food1" src="images/Food7.png" alt="" style="width: 200px;">
+				<div class="Food-name">
+					<p>Roll</p>
+				</div>
+			</div>
+			<div class="Food">
+				<img class="Food1" src="images/Food9.png" alt="" style="width: 200px;">
+				<div class="Food-name">
+					<p>Cake</p>
+				</div>
+			</div>
+			<div class="Food">
+				<img class="Food1" src="images/Food10.png" alt="" style="width: 200px;">
+				<div class="Food-name">
+					<p>Paneer</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Brand Section -->
+	<div>
+		<br>
+		<h2 style="margin-left: 80px;">Top brands for you</h2>
+		
+	<div>
+		<br>
+		<div class="wrapper-brand">
+			<div class="Brand">
+				<img class="Brand1" src="images/Brand1.png" alt="" style="width: 200px;" >
+				<div class="Brand-name">
+					<p>McDonald's</p>
+					<div class="Brand-time">
+						<p>24 min</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="Brand">
+				<img class="Brand1" src="images/Brand2.png" alt="" style="width: 200px;" >
+				<div class="Brand-name">
+					<p>Domino's Pizza</p>
+					<div class="Brand-time">
+						<p>16 min</p>
+					</div>
+				</div>
+			</div>
+			<div class="Brand">
+				<img class="Brand1" src="images/Brand3.png" alt="" style="width: 200px;" >
+				<div class="Brand-name">
+					<p>Burger King</p>
+					<div class="Brand-time">
+						<p>21 min</p>
+					</div>
+				</div>
+			</div>
+			<div class="Brand">
+				<img class="Brand1" src="images/Brand4.png" alt="" style="width: 200px;" >
+				<div class="Brand-name">
+					<p>Haldiram's</p>
+					<div class="Brand-time">
+						<p>26 min</p>
+					</div>
+				</div>
+			</div>
+			<div class="Brand">
+				<img class="Brand1" src="images/Brand5.png" alt="" style="width: 200px;" >
+				<div class="Brand-name">
+					<p>KFC Chicken</p>
+					<div class="Brand-time">
+						<p>18 min</p>
+					</div>
+				</div>
+			</div>
+			<div class="Brand">
+				<img class="Brand1" src="images/Brand6.png" alt="" style="width: 200px;" >
+				<div class="Brand-name">
+					<p>Bikanervala</p>
+					<div class="Brand-time">
+						<p>12 min</p>
+					</div>
+				</div>
+			</div>
+			<div class="Brand">
+				<img class="Brand1" src="images/Brand7.png" alt="" style="width: 200px;" >
+				<div class="Brand-name">
+					<p>Subway</p>
+					<div class="Brand-time">
+						<p>28 min</p>
+					</div>
+				</div>
+			</div>
+			<div class="Brand">
+				<img class="Brand1" src="images/Brand8.png" alt="" style="width: 200px;" >
+				<div class="Brand-name">
+					<p>Pizza Hut</p>
+					<div class="Brand-time">
+						<p>30 min</p>
+					</div>
+				</div>
+			</div>
+			
+			</div>
+		</div>
+	</div>
+
+	</div>
+
+	<!-- Restaurant Section -->
+	<div>
+		<br>
+		<h2 style="margin-left: 80px;">Best Food in Delhi NCR</h2>
+		
+		<!-- This is for cards that zomato offer -->
+		<section class = "container_cards">
+		
+			<div class = "we_offer__cards">
+			   <img src = "./Images/item1.png" alt = "card1 image"/>
+			   <div class = "we_offer__cards_content">
+				   <h2>The Starter Palace</h2>
+				   <p>Stay home and order to your doorstep</p>
+				   <div class="star-rating" data-rating="0">
+					<span class="star" data-value="1">&#9733;</span>
+					<span class="star" data-value="2">&#9733;</span>
+					<span class="star" data-value="3">&#9733;</span>
+					<span class="star" data-value="4">&#9733;</span>
+					<!-- <span class="star" data-value="5">&#9733;</span> -->
+				  </div>
+				  
+			   </div>
+			</div>
+			
+			<div class = "we_offer__cards">
+			   <img src = "./Images/item2.png" alt = "card1 image"/>
+			   <div class = "we_offer__cards_content">
+				   <h2>KFC</h2>
+				   <p>Visit amazing restaurants and cafes</p>
+				   <div class="star-rating" data-rating="0">
+					<span class="star" data-value="1">&#9733;</span>
+					<span class="star" data-value="2">&#9733;</span>
+					<span class="star" data-value="3">&#9733;</span>
+					<span class="star" data-value="4">&#9733;</span>
+					<span class="star" data-value="5">&#9733;</span>
+				  </div>
+			   </div>
+			</div>
+			
+			<div class = "we_offer__cards">
+			   <img src = "./Images/item3.png" alt = "card1 image"/>
+			   <div class = "we_offer__cards_content">
+				   <h2>Rom's Pizza</h2>
+				   <p>Spend leisure time enjoying the nightlife of Pune</p>
+				   <div class="star-rating" data-rating="0">
+					<span class="star" data-value="1">&#9733;</span>
+					<span class="star" data-value="2">&#9733;</span>
+					<span class="star" data-value="3">&#9733;</span>
+					<!-- <span class="star" data-value="4">&#9733;</span>
+					<span class="star" data-value="5">&#9733;</span> -->
+				  </div>
+			   </div>
+			</div>
+			
+			<div class = "we_offer__cards">
+			   <img src = "./Images/item4.png" alt = "card1 image"/>
+			   <div class = "we_offer__cards_content">
+				   <h2>Burger King</h2>
+				   <p>We ensure timely delivery to our customers</p>
+				   <div class="star-rating" data-rating="0">
+					<span class="star" data-value="1">&#9733;</span>
+					<span class="star" data-value="2">&#9733;</span>
+					<span class="star" data-value="3">&#9733;</span>
+					<span class="star" data-value="4">&#9733;</span>
+					<span class="star" data-value="5">&#9733;</span>
+				  </div>
+			   </div>
+			</div>
+			
+			 <div class = "we_offer__cards">
+				<img src = "./Images/item6.png" alt = "card1 image"/>
+				<div class = "we_offer__cards_content">
+					<h2>McDonald's</h2>
+					<p>Visit amazing restaurants and cafes</p>
+					<div class="star-rating" data-rating="0">
+						<span class="star" data-value="1">&#9733;</span>
+						<span class="star" data-value="2">&#9733;</span>
+						<span class="star" data-value="3">&#9733;</span>
+						<span class="star" data-value="4">&#9733;</span>
+						<span class="star" data-value="5">&#9733;</span>
+					  </div>
+				</div>
+			 </div>
+			 <div class = "we_offer__cards">
+				<img src = "./Images/item7.png" alt = "card1 image"/>
+				<div class = "we_offer__cards_content">
+					<h2>Apni Rasoi Int</h2>
+					<p>Visit amazing restaurants and cafes</p>
+					<div class="star-rating" data-rating="0">
+						<span class="star" data-value="1">&#9733;</span>
+						<span class="star" data-value="2">&#9733;</span>
+						<span class="star" data-value="3">&#9733;</span>
+						<span class="star" data-value="4">&#9733;</span>
+						<span class="star" data-value="5">&#9733;</span>
+					  </div>
+				</div>
+			 </div>
+			 <div class = "we_offer__cards">
+				<img src = "./Images/item8.png" alt = "card1 image"/>
+				<div class = "we_offer__cards_content">
+					<h2>Kwality Wall’s Frozen Dessert</h2>
+					<p>Visit amazing restaurants and cafes</p>
+					<div class="star-rating" data-rating="0">
+						<span class="star" data-value="1">&#9733;</span>
+						<span class="star" data-value="2">&#9733;</span>
+						<span class="star" data-value="3">&#9733;</span>
+						<!-- <span class="star" data-value="4">&#9733;</span> -->
+						<span class="star" data-value="5">&#9733;</span>
+					  </div>
+				</div>
+			 </div>
+			 <div class = "we_offer__cards">
+				<img src = "./Images/item9.png" alt = "card1 image"/>
+				<div class = "we_offer__cards_content">
+					<h2>Behrouz Biryani</h2>
+					<p>Visit amazing restaurants and cafes</p>
+					<div class="star-rating" data-rating="0">
+						<span class="star" data-value="1">&#9733;</span>
+						<span class="star" data-value="2">&#9733;</span>
+						<span class="star" data-value="3">&#9733;</span>
+						<span class="star" data-value="4">&#9733;</span>
+						<!-- <span class="star" data-value="5">&#9733;</span> -->
+					  </div>
+				</div>
+			 </div>
+			 <div class = "we_offer__cards">
+				<img src = "./Images/item10.png" alt = "card1 image"/>
+				<div class = "we_offer__cards_content">
+					<h2>Bakingo</h2>
+					<p>Visit amazing restaurants and cafes</p>
+					<div class="star-rating" data-rating="0">
+						<span class="star" data-value="1">&#9733;</span>
+						<span class="star" data-value="2">&#9733;</span>
+						<span class="star" data-value="3">&#9733;</span>
+						<span class="star" data-value="4">&#9733;</span>
+						<span class="star" data-value="5">&#9733;</span>
+					  </div>
+				</div>
+			 </div>
+			 <div class = "we_offer__cards">
+				<img src = "./Images/item11.png" alt = "card1 image"/>
+				<div class = "we_offer__cards_content">
+					<h2>Bikkgane Biryani</h2>
+					<p>Visit amazing restaurants and cafes</p>
+					<div class="star-rating" data-rating="0">
+						<span class="star" data-value="1">&#9733;</span>
+						<span class="star" data-value="2">&#9733;</span>
+						<span class="star" data-value="3">&#9733;</span>
+						<!-- <span class="star" data-value="4">&#9733;</span>
+						<span class="star" data-value="5">&#9733;</span> -->
+					  </div>
+				</div>
+			 </div>
+			 <div class = "we_offer__cards">
+				<img src = "./Images/item12.png" alt = "card1 image"/>
+				<div class = "we_offer__cards_content">
+					<h2>Gianis - Ice Cream, Shakes & Smothie</h2>
+					<p>Visit amazing restaurants and cafes</p>
+					<div class="star-rating" data-rating="0">
+						<span class="star" data-value="1">&#9733;</span>
+						<span class="star" data-value="2">&#9733;</span>
+						<span class="star" data-value="3">&#9733;</span>
+						<span class="star" data-value="4">&#9733;</span>
+						<span class="star" data-value="5">&#9733;</span>
+					  </div>
+				</div>
+			 </div>
+			 <div class = "we_offer__cards">
+				<img src = "./Images/item13.png" alt = "card1 image"/>
+				<div class = "we_offer__cards_content">
+					<h2>Mashaallah Chicken Corner</h2>
+					<p>Visit amazing restaurants and cafes</p>
+					<div class="star-rating" data-rating="0">
+						<span class="star" data-value="1">&#9733;</span>
+						<span class="star" data-value="2">&#9733;</span>
+						<span class="star" data-value="3">&#9733;</span>
+						<span class="star" data-value="4">&#9733;</span>
+						<!-- <span class="star" data-value="5">&#9733;</span> -->
+					  </div>
+				</div>
+			 </div>
+			
+	   </section>
+	</div>
+	
+<!--part1 done-->
+<div class="mid">
+	<div class="container-fluid">
+		<div class="row">
+			
+			<div class= "col-xl-3" >
+				<h3 style="margin-left: -20px;">Collections</h3>
+				<h5 style="color:gray;font-size:16px;margin-left: -20px;font-weight: normal">Explore curated lists of top restaurants, cafes, pubs, and bars in and around Delhi NCR, based on trends</h5>
+				<div class="row">
+					<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12" id="one">
+						<div class="image1">
+						</div>
+						<div class="text1">
+							<h4><b>Trending this week</b></h4>
+							The most popular restaurants<br>in town this week
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12" id="two">
+							<div class="image2">
+							</div>
+							<div class="text1">
+								<h4><b>Great food, no bull	</b></h4>
+								The hunt for the highest-rated<br>restaurants in your city ends...
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12" id="three">
+							<div class="image3">
+							</div>
+							<div class="text1">
+								<h4><b>Navratri specials</b></h4>
+								The best restaurants to help<br>you feast while you fast
+							</div>
+						</div>
+					<div class="row">
+						<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12" id="four">
+							<div class="image4">
+							</div>
+							<div class="text1">
+								<h4><b>Newly opened</b></h4>
+								The best new places in town
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+		<div  id="order" style="width:350px;">
+			<h5 style="color:gray;font-size:16px;margin-left: -20px;font-weight: normal">Explore curated lists of top restaurants, cafes, pubs, and bars in and around Delhi NCR, based on trends</h5>
+			<h3>Order Food Online</h3>
+			<h5 style="color:gray;font-size:16px;font-weight: normal;">From the best restaurants delivering to your<br> doorstep</h5>
+			<div class="order_online" style="background-color: #FFF; padding-left: 10px; width:350px; border-radius: 7px;">
+					<p style="margin: -6px 0px 15px 15px; font-size: 16px;font-weight: 600;"><br>Enter your delivery location</p>
+					<div class="col-xs-12">
+						<div class="input-group" id="o_input">
+							<span class="input-group-addon"><i class="glyphicon glyphicon-send"></i></span>
+							<input type="text-box" class="form-control" id="loc" placeholder="Please type a location">	
+						</div>	
+					</div>	
+					<button type="button" class="btn btn-success" id="o_btn">Order Food Online!</button>
+					<p style="color:green; margin-top: 20px; padding-bottom: 30px;margin-left: 13px;">View restaurants delivering to you and get 30% OFF<br> on your first order with the promo code <b>GET200</b>.</p>
+			</div>	
+		</div>
+	
+<!-- <p style="color:#B22222;width: 69%;background-color: #fff;text-align: center;border-radius:7px; height: 70px;">All collections in Delhi NCR</p> -->
+
+<div class="wrapper_menu">
+	<h3 style="margin-left: -20px;">Quick Searches</h3>
+	<h5 style="color:gray;font-size:16px;margin-left: -20px;font-weight: normal">Discover restaurants by type of meal</h5>
+	<div class="row wrapper" style="width: 1400px;">
+	  <div class="col-md-1 menu">
+	    <div>
+	      <a href="#">
+	        <img src="images/cat1.png" style="width:48px;">
+	        <div class="caption">
+	          <p>Delivery</p>
+	        </div>
+	      </a>
+	    </div>
+	  </div>
+	  <div class="col-md-1 menu">
+	    <div>
+	      <a href="#">
+	        <img src="images/cat2.png" style="width:48px;">
+	        <div class="caption"  style="width: 100px;">
+	          <p>Pocket-Friendly Delivery</p>
+	        </div>
+	      </a>
+	    </div>
+	  </div>
+	  <div class="col-md-1 menu">
+	    <div>
+	      <a href="#">
+	        <img src="images/cat3.png"  style="width:48px;">
+	        <div class="caption">
+	          <p>Lunch</p>
+	        </div>
+	      </a>
+	    </div>
+	  </div>
+	   <div class="col-md-1 menu">
+	    <div>
+	      <a href="#">
+	        <img src="images/cat4.png" style="width:48px;">
+	        <div class="caption">
+	          <p>Dinner</p>
+	        </div>
+	      </a>
+	    </div>
+	  </div>
+	  <div class="col-md-1 menu">
+	    <div>
+	      <a href="#">
+	        <img src="images/cat5.png" style="width:48px;">
+	        <div class="caption">
+	          <p>Drinks and Nightlife</p>
+	        </div>
+	      </a>
+	    </div>
+	  </div>
+	  <div class="col-md-1 menu">
+	    <div>
+	      <a href="#">
+	        <img src="images/cat6.png" style="width:48px;">
+	        <div class="caption">
+	          <p>Breakfast</p>
+	        </div>
+	      </a>
+	    </div>
+	  </div>
+	   <div class="col-md-1 menu">
+	    <div>
+	      <a href="#">
+	        <img src="images/cat7.png" style="width:48px;">
+	        <div class="caption">
+	          <p>Cafés</p>
+	        </div>
+	      </a>
+	    </div>
+	  </div>
+	  <div class="col-md-1 menu">
+	    <div>
+	      <a href="#">
+	        <img src="images/cat8.png" style="width:48px;">
+	        <div class="caption" style="width: 100px;">
+	          <p>Luxury Dining</p>
+	        </div>
+	      </a>
+	    </div>
+	  </div>
+	 </div>
+</div>
+</div>
+<div class="wrapper_menu">
+	<h3 style="margin-left: 70px;">Popular localities in and around Delhi NCR</h3>
+	<h5 style="color:gray;font-size:16px;margin-left: 70px;font-weight: normal; margin-bottom: -50px;">Explore restaurants, bars, and cafés by locality</h5>
+
+<div class="container places" style="width: 1400px;";>
+	<div class="row" style="margin: 0 -60px;">
+		<div class="col-md-3 col-sm-2">
+			<ul class="places_1">
+				<li><a href="#">Gurudwara Bangla Sahib</a> <a href="#" style="color: gray">(313 places)</a></li>
+				<li><a href="#">Rajouri Garden <a href="#" style="color: gray">(351 places)</a></li>
+				<li><a href="#">Golf Course Road <a href="#" style="color: gray"> (194 places)</a></li>
+				<li><a href="#">Indirapuram <a href="#" style="color: gray"> (439 places)</a></li>
+				<li><a href="#">Purana Qila <a href="#" style="color: gray"> (313 places)</a></li>
+				<li><a href="#">Delhi-NCR <a href="#" style="color: gray"> (267 places)</a></li>
+				<li><a href="#">Vasant Vihar<a href="#" style="color: gray"> (31 places)</a></li>
+				<li><a href="#">Narayana vihar<a href="#" style="color: gray"> (393 places)</a></li>
+				<li><a href="#">Dwarka more <a href="#" style="color: gray">(26 places)</a></li>
+				<li><a href="#">Vasant Kunj <a href="#" style="color: gray">(31 places)</a></li>
+			</ul>
+		</div>
+			<div class="col-md-3 col-sm-2">
+			<ul class="places_2">
+				<li><a href="#">Connaught Place <a href="#" style="color: gray">(313 places)</a></li>
+				<li><a href="#">Rajouri Garden <a href="#" style="color: gray">(351 places)</a></li>
+				<li><a href="#">Golf Course Road <a href="#" style="color: gray">(194 places)</a></li>
+				<li><a href="#">Indirapuram <a href="#" style="color: gray">(439 places)</a></li>
+				<li><a href="#">Rajpath <a href="#" style="color: gray">(313 places)</a></li>
+				<li><a href="#">South Delhi <a href="#" style="color: gray">(39 places)</a></li>
+				<li><a href="#">India Gate<a href="#" style="color: gray">(113 places)</a></li>
+				<li><a href="#">Hauz Khas <a href="#" style="color: gray">(23 places)</a></li>
+				<li><a href="#">Bahai <a href="#" style="color: gray">(243 places)</a></li>
+				<li><a href="#">Chandni Chowk <a href="#" style="color: gray">(156 places)</a></li>
+			</ul>
+		</div>
+			<div class="col-md-3 col-sm-2">
+			<ul class="places_3">
+				<li><a href="#">Jama Masjid <a href="#" style="color: gray">(313 places)</a></li>
+				<li><a href="#">Rajouri Garden <a href="#" style="color: gray">(351 places)</a></li>
+				<li><a href="#">Golf Course Road <a href="#" style="color: gray">(194 places)</a></li>
+				<li><a href="#">Indirapuram <a href="#" style="color: gray">(439 places)</a></li>
+				<li><a href="#">Rashtrapati Bhawan <a href="#" style="color: gray">(49 places)</a></li>
+				<li><a href="#">Sarojini Nagar Market <a href="#" style="color: gray">(313 places)</a></li>
+				<li><a href="#">Jantar Mantar <a href="#" style="color: gray">(49 places)</a></li>
+				<li><a href="#">Raj Ghat  <a href="#" style="color: gray"> (98 places)</a></li>
+				<li><a href="#">Connaught Place <a href="#" style="color: gray">(90 places)</a></li>
+				<li><a href="#">Kingdom of Dreams <a href="#" style="color: gray">(136 places)</a></li>
+			</ul>
+		</div>
+		
+	</div>
+</div>
+
+<div class="statistics">
+	<div class="stats first">
+		<div class="value">24</div>
+		<div class="label1">COUNTRIES</div>
+	</div>
+	<div class="stats">
+		<div class="value">1.2M</div>
+		<div class="label1">Restaurants</div>
+	</div>
+	<div class="stats">
+		<div class="value">120M</div>
+		<div class="label1">foodies every month</div>
+	</div>
+	<div class="stats">
+		<div class="value">30M</div>
+		<div class="label1">photos</div>
+	</div>
+	<div class="stats">
+		<div class="value">10M</div>
+		<div class="label1">reviews</div>
+	</div>
+	<div class="stats">
+		<div class="value">18M</div>
+		<div class="label1">bookmarks</div>
+	</div>
+	<div class="stats">
+		<div class="value">4M</div>
+		<div class="label1">regular customer</div>
+	</div>
+</div>
+
+
+		<div class="footer" style="min-height: 4 00px;">
+			<div class="wrap">
+				<div class="row">
+					<div class="col-m-10" style="width: 725px;">
+						<div class="logo1">
+							<h3 style="font-size: 15px; margin:3px -5px">Zomato</h3>
+						</div>
+					</div>
+					<div class="col-m-6" style= "margin-top: -40px; margin-left: 1000px; width: 1200px;">
+						<div class="form-group" style="margin-left: 70px;">
+							<div class="input-group col-xs-2">
+								<span class="input-group-addon"> <i class="glyphicon glyphicon-globe"></i></span>
+									<select class="form-control">
+										<option>English</option>
+										<option>Cestina</option>
+										<option>Espanol</option>
+										<option>Indonesian</option>
+										<option>Italian</option>
+										<option>Polish</option>
+										<option>Postugues(BR)</option>
+										<option>Portugues(PT)</option>
+								</select>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+			<div class="footer_divider">
+			</div>
+
+			<div class="row">
+				<div class="col-m-4" style="padding-left: 150px;">
+					<h3 style="padding-left: 47px;">About Zomato</h3>
+					<ul class="footer_links-1">
+						<li>About Us</li>
+						<li>Culture</li>
+						<li>Blog</li>
+						<li>Careers</li>
+						<li>Contact</li>
+					</ul>
+				</div>
+				<div class="col-m-5" style=" margin-top: -186px; margin-left: 600px;">
+					<h3 style="padding-left: 47px;">For Foodies</h3>
+					<ul class="footer-links-2">
+						<li>Code Of Conduct</li>
+						<li>Community</li>
+						<li>Verified Users</li>
+						<li>Blogger Help</li>
+						<li>developer</li>
+						<li>Mobile Apps</li>
+					</ul>
+				</div>
+				<div class="col-m-5" style="margin-top: -215px;margin-left: 1100px;">
+					<h3 style="padding-left: 45px;">For Restaurants</h3>
+					<ul class="footer-links-3">
+						<li>Add a Restaurant</li>
+						<li>Claim your listing</li>
+						<li>Business App</li>
+						<li>Business Owner Guidelines</li>
+						<li>Buisness Blog</li>
+						<li>Restaurant Widget</li>
+						
+					</ul>
+				</div>					
+		    </div>
+
+		    <div class="footer_divider">
+			</div>
+
+			<div class="footer_list" style="justify-content: space-between;">
+   
+				<ul class="footer_bottom" >
+					<li>Privacy</li>
+					<li>Terms</li>
+					<li>API Policy</li>
+					<li>CSR</li>
+					<li>Security</li>
+					<li>Sitemap</li>
+				</ul>	
+
+			</div>
+
+			<div class="footer_divider"></div>		
+        </div>
+
+
+		<script src="script.js"></script>
+
+
+</body>
+</html>
